@@ -1,0 +1,24 @@
+{
+  "name": "pi-workbench",
+  "version": "0.1.0",
+  "description": "Browse, search, edit, and review current changes without leaving pi.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": ["pi-package"],
+  "files": ["src", "README.md", "LICENSE"],
+  "pi": { "extensions": ["./src/index.ts"] },
+  "engines": { "node": ">=22.6" },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test test/*.test.ts"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*"
+  },
+  "dependencies": {
+    "typescript": "^5.9.0",
+    "typescript-language-server": "^5.0.0"
+  },
+  "devDependencies": { "@types/node": "^22.0.0" }
+}
